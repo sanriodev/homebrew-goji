@@ -5,21 +5,21 @@
 class Goji < Formula
   desc "goji binaries for brew."
   homepage "https://github.com/sanriodev/goji"
-  version "1.2.1"
+  version "1.3.0"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/sanriodev/goji/releases/download/v1.2.1/goji_1.2.1_darwin_amd64.tar.gz"
-      sha256 "0f6ef905234c7e07ec5abfc2a816eba92ce1d5abaf82cf1c9db36250210340d4"
+      url "https://github.com/sanriodev/goji/releases/download/v1.3.0/goji_1.3.0_darwin_amd64.tar.gz"
+      sha256 "259e5286c06a52fed371e6c3bdeaa7536f7df0e0b83706642d573259e5d95234"
 
       def install
         bin.install "goji"
       end
     end
     on_arm do
-      url "https://github.com/sanriodev/goji/releases/download/v1.2.1/goji_1.2.1_darwin_arm64.tar.gz"
-      sha256 "b89820926fe7fdee4e376dd51a359acd750a6e62fed3227f8aaa2e4440ac21e9"
+      url "https://github.com/sanriodev/goji/releases/download/v1.3.0/goji_1.3.0_darwin_arm64.tar.gz"
+      sha256 "c837c3ed3bae2f0d80be740be41d0a426b72776eb840d49776177db4b0d5f6ee"
 
       def install
         bin.install "goji"
@@ -30,8 +30,8 @@ class Goji < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/sanriodev/goji/releases/download/v1.2.1/goji_1.2.1_linux_amd64.tar.gz"
-        sha256 "152372fd7209b8fcf4f1247eac290be427816264bfdac3a8e255f38ce785b765"
+        url "https://github.com/sanriodev/goji/releases/download/v1.3.0/goji_1.3.0_linux_amd64.tar.gz"
+        sha256 "220af86c5b1a73ab49f020333579bbe3602b7f41220fdb4e06d2fdc1f08aaf24"
 
         def install
           bin.install "goji"
@@ -40,8 +40,8 @@ class Goji < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/sanriodev/goji/releases/download/v1.2.1/goji_1.2.1_linux_arm64.tar.gz"
-        sha256 "1e2dd11c7a7e83c3c6cf0da543332523b56fcfb27c3db31212b292284edceeab"
+        url "https://github.com/sanriodev/goji/releases/download/v1.3.0/goji_1.3.0_linux_arm64.tar.gz"
+        sha256 "52968d987113ca09a977c10e6c06b364f48192f8e5e03cf161287932539f9ffe"
 
         def install
           bin.install "goji"
