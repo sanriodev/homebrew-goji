@@ -10,16 +10,16 @@ class Goji < Formula
 
   on_macos do
     on_intel do
-      url "https://github.com/sanriodev/goji/releases/download/1.4.0/goji_1.4.0_darwin_amd64.tar.gz"
-      sha256 "0fc79a25b00da7f0232d2e0c020dd9e2e724ca22825f387218a71642dab818f6"
+      url "https://github.com/sanriodev/goji/releases/download/v1.4.0/goji_1.4.0_darwin_amd64.tar.gz"
+      sha256 "aad16c71642664ef51d6eab122fda6b7fc137800a6e0921c27d7e921373c8dc6"
 
       def install
         bin.install "goji"
       end
     end
     on_arm do
-      url "https://github.com/sanriodev/goji/releases/download/1.4.0/goji_1.4.0_darwin_arm64.tar.gz"
-      sha256 "6c1f271c52dbec363222aeefddc04d40e5a1b7f92a2e9c02fa18609c9902eaff"
+      url "https://github.com/sanriodev/goji/releases/download/v1.4.0/goji_1.4.0_darwin_arm64.tar.gz"
+      sha256 "7b2920a8faa8d5a578d4a3b57209c3c27e2a1124d55ed235c77f3530672bf694"
 
       def install
         bin.install "goji"
@@ -30,8 +30,8 @@ class Goji < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/sanriodev/goji/releases/download/1.4.0/goji_1.4.0_linux_amd64.tar.gz"
-        sha256 "d70760073a2c49140d6e355dab32d01ef18e73297d2be10475397f57e4bae079"
+        url "https://github.com/sanriodev/goji/releases/download/v1.4.0/goji_1.4.0_linux_amd64.tar.gz"
+        sha256 "705e65d44db62bf4096c9082cc995a8153db0e30023f856d678b58ac1d96c8e0"
 
         def install
           bin.install "goji"
@@ -40,8 +40,8 @@ class Goji < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/sanriodev/goji/releases/download/1.4.0/goji_1.4.0_linux_arm64.tar.gz"
-        sha256 "4d30697b66f14c23ef8e009f8e98cdcc0d10210658cf55c8e1b0dc8327b9e326"
+        url "https://github.com/sanriodev/goji/releases/download/v1.4.0/goji_1.4.0_linux_arm64.tar.gz"
+        sha256 "413ad0aa153fcc9640e58c551c7f4babc34455d657b917583b46fbff2d28fd4b"
 
         def install
           bin.install "goji"
