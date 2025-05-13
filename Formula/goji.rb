@@ -5,51 +5,16 @@
 class Goji < Formula
   desc "Lightweight version of Oji text emoticon generator. Rewritten in go"
   homepage "https://github.com/sanriodev/goji"
+  url "https://github.com/sanriodev/goji/archive/refs/tags/v1.4.1.tar.gz"
+  sha256 "9543a521a9f59fd8fba8b33681ef905122826740c82a78acdedac2dce9b15d3c"
   version "1.4.1"
   license "MIT"
 
-  on_macos do
-    on_intel do
-      url "https://github.com/sanriodev/goji/releases/download/v1.4.1/goji_1.4.1_darwin_amd64.tar.gz"
-      sha256 "c4f8b0c98998c9bf6376882f43ea6ca73796358acc24353aeb1ae5aeb8b5da1c"
+  depends_on "go" => :build
 
-      def install
-        bin.install "goji"
-      end
-    end
-    on_arm do
-      url "https://github.com/sanriodev/goji/releases/download/v1.4.1/goji_1.4.1_darwin_arm64.tar.gz"
-      sha256 "f81eb27b81a12d91db75496c2f7841b290e2d3f1b791fd70c5d591422dc7e1b8"
-
-      def install
-        bin.install "goji"
-      end
-    end
+  def install
+    system "go", "build", *std_go_args
   end
-
-  on_linux do
-    on_intel do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/sanriodev/goji/releases/download/v1.4.1/goji_1.4.1_linux_amd64.tar.gz"
-        sha256 "567136850a4187d8a5cdd9ed70ef145930bb7f6865568a8d0bcdfcbcbd824990"
-
-        def install
-          bin.install "goji"
-        end
-      end
-    end
-    on_arm do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/sanriodev/goji/releases/download/v1.4.1/goji_1.4.1_linux_arm64.tar.gz"
-        sha256 "c9366545887c4b1e252e72a08676eb4f736932944fa6086af088a6f793acd67d"
-
-        def install
-          bin.install "goji"
-        end
-      end
-    end
-  end
-
   test do
     output = shell_output("#{bin}/goji -h")
     assert_match(/Create custom or random text emojis/, output)
