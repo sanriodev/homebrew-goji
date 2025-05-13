@@ -51,7 +51,9 @@ class Goji < Formula
   end
 
   test do
-    output = shell_output("#{bin}/goji -n")
-    assert_match(/Use arrow keys to select and press Enter to confirm\./, output)
+    output = shell_output("#{bin}/goji -h")
+    assert_match(/Create custom or random text emojis/, output)
+    assert_match(/--new/, output)
+    assert_match(/--random/, output)
   end
 end
