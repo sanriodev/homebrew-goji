@@ -5,7 +5,7 @@ the ci-generated homebrew formulae for sanriodev/goji
 ## Install goji
 
 ```bash
-brew tap sanriodev/homebrew-goji && brew install goji
+brew tap sanriodev/goji && brew install goji
 ```
 
 
